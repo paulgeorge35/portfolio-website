@@ -29,8 +29,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased vertical center-h bg-stone-900 text-stone-50 font-mono`}
       >
         {children}
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }
