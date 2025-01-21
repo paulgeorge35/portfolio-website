@@ -12,7 +12,7 @@ export default function Footer() {
                 <FooterItem href={env.linkedin}>
                     linkedin
                 </FooterItem>
-                <FooterItem href={`${env.github}/portfolio`}>
+                <FooterItem href={`${env.github}/portfolio-website`}>
                     view source
                 </FooterItem>
             </span>
