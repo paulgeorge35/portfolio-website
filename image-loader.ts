@@ -10,6 +10,5 @@ export default function myImageLoader({
   quality: string;
 }) {
   const encodedSrc = encodeURIComponent(src);
-  console.log(src, width, quality);
   return `https://image.paulgeorge.dev/${encodedSrc}?w=${width}&q=${quality || 75}`;
 }
