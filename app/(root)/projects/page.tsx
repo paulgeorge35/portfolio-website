@@ -11,6 +11,18 @@ const projects = [
     description: "A SaaS application that I'm currently building on my own. It's a platform for managing appointments, patients, documents and more."
   },
   {
+    href: "https://github.com/paulgeorge35/smartbill",
+    label: "SmartBill Client",
+    tags: ["Bun", "TypeScript", "Node.js"],
+    description: "A modern, type-safe client for integrating with the SmartBill API. This package provides a comprehensive implementation for managing invoices, estimates, payments, and other business documents through the SmartBill platform.",
+  },
+  {
+    href: "https://github.com/paulgeorge35/eu-platesc",
+    label: "EuPlatesc Client",
+    tags: ["Bun", "TypeScript", "Node.js"],
+    description: "Wrote a fully type-safe TypeScript client for the romanian based payment processor, EuPlatesc, to make up for the poor or inconsistent documentation.",
+  },
+  {
     href: "https://new.andreeadutu.ro",
     label: "Dentist Office Website",
     tags: ["Next.js", "Tailwind", "TypeScript", "React", "Markdown"],
