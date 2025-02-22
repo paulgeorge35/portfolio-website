@@ -4,6 +4,13 @@ import Link from "next/link";
 
 const projects = [
   {
+    href: "https://supaboard.io",
+    label: "supaboard.io",
+    current: true,
+    tags: ["Express", "TypeScript", "PostgreSQL", "Tanstack Router", "React", "nginx", "Docker", "Redis"],
+    description: "Multi-tenant SaaS application for managing customer feedback. Allows for custom subdomain mapping and is fully self-hosted."
+  },
+  {
     href: "https://mydent.one",
     label: "Appointment Booking",
     current: true,
