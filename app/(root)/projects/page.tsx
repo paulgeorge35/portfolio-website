@@ -30,7 +30,7 @@ const projects = [
     description: "Wrote a fully type-safe TypeScript client for the romanian based payment processor, EuPlatesc, to make up for the poor or inconsistent documentation.",
   },
   {
-    href: "https://new.andreeadutu.ro",
+    href: "https://dr.andreeadutu.ro",
     label: "Dentist Office Website",
     tags: ["Next.js", "Tailwind", "TypeScript", "React", "Markdown"],
     description: "This is a dentist office website that I built for my girlfriend. It's built with Next.js, Tailwind, and features a statically generated blog using Markdown."
