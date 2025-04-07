@@ -4,7 +4,7 @@ import FooterItem from "./FooterItem";
 
 export default function Footer() {
     return (
-        <footer className="vertical center-h md:!items-start gap-4 mt-auto">
+        <footer className="vertical center-h md:items-start! gap-4 mt-auto">
             <span className="horizontal gap-2">
                 <FooterItem href={env.github}>
                     github

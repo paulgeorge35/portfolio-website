@@ -1,59 +1,149 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-	.debug {
-		@apply border border-red-500;
-	}
+@plugin 'tailwindcss-animate';
 
-	.horizontal {
-		@apply flex flex-row;
-	}
+@custom-variant dark (&:is(.dark *));
 
-	.horizontal-rev {
-		@apply flex flex-row-reverse;
-	}
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
 
-	.vertical {
-		@apply flex flex-col;
-	}
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
 
-	.vertical-rev {
-		@apply flex flex-col-reverse;
-	}
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
 
-	.horizontal.center-v {
-		@apply items-center;
-	}
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
 
-	.horizontal.center-h {
-		@apply justify-center;
-	}
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
 
-	.horizontal.center {
-		@apply items-center justify-center;
-	}
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
 
-	.vertical.center-v {
-		@apply justify-center;
-	}
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
 
-	.vertical.center-h {
-		@apply items-center;
-	}
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
 
-	.vertical.center {
-		@apply items-center justify-center;
-	}
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
 
-	.space-between {
-		@apply justify-between;
-	}
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility debug {
+  @apply border border-red-500;
+}
+
+@utility horizontal {
+  @apply flex flex-row;
+
+  &.center-v {
+    @apply items-center;
+  }
+
+  &.center-h {
+    @apply justify-center;
+  }
+
+  &.center {
+    @apply items-center justify-center;
+  }
+}
+
+@utility horizontal-rev {
+  @apply flex flex-row-reverse;
+}
+
+@utility vertical {
+  @apply flex flex-col;
+
+  &.center-v {
+    @apply justify-center;
+  }
+
+  &.center-h {
+    @apply items-center;
+  }
+
+  &.center {
+    @apply items-center justify-center;
+  }
+}
+
+@utility vertical-rev {
+  @apply flex flex-col-reverse;
+}
+
+@utility center-v {
+  &.horizontal {
+    @apply items-center;
+  }
+
+  &.vertical {
+    @apply justify-center;
+  }
+}
+
+@utility center-h {
+  &.horizontal {
+    @apply justify-center;
+  }
+
+  &.vertical {
+    @apply items-center;
+  }
+}
+
+@utility center {
+  &.horizontal {
+    @apply items-center justify-center;
+  }
+
+  &.vertical {
+    @apply items-center justify-center;
+  }
+}
+
+@utility space-between {
+  @apply justify-between;
+}
+
+@layer utilities {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 
 @layer base {
