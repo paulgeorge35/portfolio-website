@@ -1,15 +1,15 @@
-import { Footer, Navigation, Shell } from "@/app/_components";
+import { Footer, Navigation, Shell } from '@/app/_components';
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <Shell>
-            <Navigation />
-            {children}
-            <Footer />
-        </Shell>
-    )
+  return (
+    <Shell>
+      <Navigation />
+      {children}
+      <Footer />
+    </Shell>
+  );
 }
