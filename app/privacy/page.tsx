@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
         <p>
           The use of these tracking cookies is optional and requires your explicit consent, which
           you can provide or withdraw through the cookie banner displayed on your first visit.
-          Strictly necessary cookies for the website's functionality do not require consent.
+          Strictly necessary cookies for the website&apos;s functionality do not require consent.
         </p>
 
         <h2 className="mt-6 mb-3 font-semibold">How We Use Your Information</h2>
