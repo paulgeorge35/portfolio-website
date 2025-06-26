@@ -1,11 +1,11 @@
 'use client';
 
 import { Analytics } from '@vercel/analytics/react';
-import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
 import CookieConsentBanner from './CookieConsentBanner';
+import { UmamiAnalytics } from './UmamiAnalytics';
 
 // Assuming the banner component is in the same directory
 
@@ -36,12 +36,7 @@ export function AnalyticsProvider() {
       {consentStatus === 'accepted' && (
         <>
           <Analytics />
-          <Script
-            defer
-            src="https://umami.paulgeorge.dev/script.js"
-            data-website-id="832764d4-122f-4f5c-a816-0af42459d3b7"
-            strategy="afterInteractive"
-          />
+          <UmamiAnalytics appId="832764d4-122f-4f5c-a816-0af42459d3b7" />
         </>
       )}
       {consentStatus === null && (
