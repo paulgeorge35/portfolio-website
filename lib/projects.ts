@@ -22,7 +22,7 @@ export const projects: Project[] = [
       'S3',
     ],
     description:
-      'Multi-tenant SaaS application for managing customer feedback. A monorepo containing 3 services: React Vite frontend, API written in Express, Node.js infra service that dynamically configures custom domains and leverages Traefik dynamic routers to handle routing and certificate management. Deployed on self-hosted Coolify instance.',
+      "Multi-tenant SaaS application for managing customer feedback. The project is organized as a monorepo containing three services: a React Vite frontend, an API built with Express, and a Node.js infrastructure service responsible for dynamically configuring custom domains. It leverages Traefik's dynamic routing and automatic certificate management. The entire stack is deployed on a self-hosted Coolify instance.",
   },
   // {
   //   href: 'https://mydent.one',
