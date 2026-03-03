@@ -35,14 +35,17 @@ export function AnalyticsProvider() {
     <>
       {consentStatus === "accepted" && (
         <>
-          <OpenPanelComponent
-            clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID}
-            apiUrl={process.env.NEXT_PUBLIC_OPENPANEL_API_URL}
-            trackScreenViews={true}
-            trackAttributes={true}
-            trackHashChanges={true}
-            trackOutgoingLinks={true}
-          />
+          {!!process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID &&
+            !!process.env.NEXT_PUBLIC_OPENPANEL_API_URL && (
+              <OpenPanelComponent
+                clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID}
+                apiUrl={process.env.NEXT_PUBLIC_OPENPANEL_API_URL}
+                trackScreenViews={true}
+                trackAttributes={true}
+                trackHashChanges={true}
+                trackOutgoingLinks={true}
+              />
+            )}
           <Analytics />
           <UmamiAnalytics appId="832764d4-122f-4f5c-a816-0af42459d3b7" />
         </>
