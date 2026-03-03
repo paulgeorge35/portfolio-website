@@ -36,7 +36,8 @@ export function AnalyticsProvider() {
       {consentStatus === "accepted" && (
         <>
           <OpenPanelComponent
-            clientId="a1b12166-09bb-4056-b650-9194f061f546"
+            clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID}
+            apiUrl={process.env.NEXT_PUBLIC_OPENPANEL_API_URL}
             trackScreenViews={true}
             trackAttributes={true}
             trackHashChanges={true}
