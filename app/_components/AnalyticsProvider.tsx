@@ -47,7 +47,7 @@ export function AnalyticsProvider() {
               />
             )}
           <Analytics />
-          <UmamiAnalytics appId="832764d4-122f-4f5c-a816-0af42459d3b7" />
+          <UmamiAnalytics appId={process.env.NEXT_PUBLIC_UMAMI_APP_ID} />
         </>
       )}
       {consentStatus === null && (
