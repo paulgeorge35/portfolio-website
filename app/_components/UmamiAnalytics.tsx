@@ -1,4 +1,4 @@
-import Script from 'next/script';
+import Script from "next/script";
 
 /**
  * Props for the UmamiAnalytics component
@@ -39,10 +39,10 @@ export function UmamiAnalytics({ appId }: UmamiAnalyticsProps) {
     return null;
   }
 
-  if (NODE_ENV === 'development') {
+  if (NODE_ENV === "development") {
     console.log(
       `[Umami Web Analytics] App ID: ${UMAMI_APP_ID}`,
-      '\nDebug mode is enabled by default in development. No requests will be sent to the server.'
+      "\nDebug mode is enabled by default in development. No requests will be sent to the server.",
     );
     return null;
   }

@@ -1,4 +1,4 @@
-import NavigationItem from './_components/NavigationItom';
+import NavigationItem from "./_components/NavigationItom";
 
 export default function NotFound() {
   return (

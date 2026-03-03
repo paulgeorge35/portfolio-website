@@ -1,4 +1,4 @@
-import { IconProps, Icon as IconType } from '@/lib/types';
+import type { IconProps, Icon as IconType } from "@/lib/types";
 
 export type Icon = IconType;
 

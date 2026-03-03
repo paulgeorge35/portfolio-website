@@ -1,4 +1,4 @@
-import { Footer, Navigation, Shell } from '@/app/_components';
+import { Footer, Navigation, Shell } from "@/app/_components";
 
 export default function RootLayout({
   children,

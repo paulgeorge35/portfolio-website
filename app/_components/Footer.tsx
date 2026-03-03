@@ -1,8 +1,8 @@
-import { DateTime } from 'luxon';
+import { DateTime } from "luxon";
 
-import { env } from '@/lib/config-env';
+import { env } from "@/lib/config-env";
 
-import FooterItem from './FooterItem';
+import FooterItem from "./FooterItem";
 
 export default function Footer() {
   return (
@@ -10,7 +10,9 @@ export default function Footer() {
       <span className="horizontal gap-2">
         <FooterItem href={env.github}>github</FooterItem>
         <FooterItem href={env.linkedin}>linkedin</FooterItem>
-        <FooterItem href={`${env.github}/portfolio-website`}>view source</FooterItem>
+        <FooterItem href={`${env.github}/portfolio-website`}>
+          view source
+        </FooterItem>
       </span>
       <p className="text-stone-400">© {DateTime.now().year} Paul George</p>
     </footer>
