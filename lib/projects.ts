@@ -8,6 +8,24 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
+		href: "https://lighthouse.paulgeorge.dev",
+		label: "Lighthouse",
+		tags: [
+			"Tanstack Start",
+			"Vite",
+			"Bun",
+			"tRPC",
+			"Tailwind",
+			"Shadcn UI",
+			"Vitest",
+			"Playwright",
+			"Docker",
+		],
+		current: true,
+		description:
+			"A web app that runs Chrome Lighthouse performance audits on any URL. Users enter a URL, choose mobile or desktop (or both), and see category scores (Performance, Accessibility, Best Practices, SEO) and detailed audits. Everything runs locally—no Google PageSpeed API or API keys. Analyses run in isolated child processes via the Lighthouse CLI, with a concurrency limit and queue.",
+	},
+	{
 		href: "https://supaboard.io",
 		label: "supaboard.io",
 		tags: [
