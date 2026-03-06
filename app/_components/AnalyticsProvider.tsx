@@ -33,19 +33,19 @@ export function AnalyticsProvider() {
 
   return (
     <>
+      {!!process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID &&
+        !!process.env.NEXT_PUBLIC_OPENPANEL_API_URL && (
+          <OpenPanelComponent
+            clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID}
+            apiUrl={process.env.NEXT_PUBLIC_OPENPANEL_API_URL}
+            trackScreenViews={true}
+            trackAttributes={true}
+            trackHashChanges={true}
+            trackOutgoingLinks={true}
+          />
+        )}
       {consentStatus === "accepted" && (
         <>
-          {!!process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID &&
-            !!process.env.NEXT_PUBLIC_OPENPANEL_API_URL && (
-              <OpenPanelComponent
-                clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID}
-                apiUrl={process.env.NEXT_PUBLIC_OPENPANEL_API_URL}
-                trackScreenViews={true}
-                trackAttributes={true}
-                trackHashChanges={true}
-                trackOutgoingLinks={true}
-              />
-            )}
           <Analytics />
           <UmamiAnalytics appId={process.env.NEXT_PUBLIC_UMAMI_APP_ID} />
         </>
