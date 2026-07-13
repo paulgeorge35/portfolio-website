@@ -31,23 +31,23 @@ export const projects: Project[] = [
     description:
       "A real-time status and uptime monitoring app. A Bun API serves a React frontend and exposes a WebSocket that gets failure events from a Redis subscriber. A cron script enqueues check jobs to Redis from SQLite; a worker process runs N workers that BRPOP jobs, fetches each URL, writes results to ClickHouse, and PUBLISH failures to Redis so the API can push them to connected clients.",
   },
-  {
-    href: "https://lighthouse.paulgeorge.dev",
-    label: "Lighthouse",
-    tags: [
-      "Tanstack Start",
-      "Vite",
-      "Bun",
-      "tRPC",
-      "Tailwind",
-      "Shadcn UI",
-      "Vitest",
-      "Playwright",
-      "Docker",
-    ],
-    description:
-      "A web app that runs Chrome Lighthouse performance audits on any URL. Users enter a URL, choose mobile or desktop (or both), and see category scores (Performance, Accessibility, Best Practices, SEO) and detailed audits. Everything runs locally—no Google PageSpeed API or API keys. Analyses run in isolated child processes via the Lighthouse CLI, with a concurrency limit and queue.",
-  },
+  // {
+  //   href: "https://lighthouse.paulgeorge.dev",
+  //   label: "Lighthouse",
+  //   tags: [
+  //     "Tanstack Start",
+  //     "Vite",
+  //     "Bun",
+  //     "tRPC",
+  //     "Tailwind",
+  //     "Shadcn UI",
+  //     "Vitest",
+  //     "Playwright",
+  //     "Docker",
+  //   ],
+  //   description:
+  //     "A web app that runs Chrome Lighthouse performance audits on any URL. Users enter a URL, choose mobile or desktop (or both), and see category scores (Performance, Accessibility, Best Practices, SEO) and detailed audits. Everything runs locally—no Google PageSpeed API or API keys. Analyses run in isolated child processes via the Lighthouse CLI, with a concurrency limit and queue.",
+  // },
   {
     href: "https://supaboard.io",
     label: "supaboard.io",

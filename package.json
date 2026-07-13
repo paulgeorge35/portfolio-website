@@ -11,28 +11,28 @@
     "format": "biome format --write ."
   },
   "dependencies": {
-    "@openpanel/nextjs": "^1.3.0",
-    "@vercel/analytics": "^1.6.1",
+    "@openpanel/nextjs": "^1.5.1",
+    "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.35.0",
+    "framer-motion": "^12.42.2",
     "luxon": "^3.7.2",
-    "next": "16.1.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "tailwind-merge": "^3.5.0",
+    "next": "16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.6",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/luxon": "^3.6.2",
-    "@types/node": "^25.3.5",
-    "@types/react": "^19.2.14",
+    "@biomejs/biome": "^2.5.3",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/luxon": "^3.7.2",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.1",
+    "postcss": "^8.5.18",
+    "tailwindcss": "^4.3.2",
     "typescript": "^5.9.3"
   }
 }
