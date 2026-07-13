@@ -8,6 +8,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    href: "https://uuid.paulgeorge.dev",
+    label: "uuid",
+    tags: ["Go", "Docker", "REST", "MCP", "OpenTelemetry"],
+    current: false,
+    description:
+      "A lightweight UUID microservice built on Go 1.27's stdlib uuid package. A single Go HTTP server exposes REST endpoints for generating and validating UUIDv4/v7, serves an embedded OpenAPI spec, and runs an MCP Streamable HTTP server so Cursor can call generate_uuid and validate_uuid tools. Middleware applies per-IP rate limits (stricter on /mcp), security headers, and structured request logging; optional OpenTelemetry exports traces, metrics, and logs over OTLP. Built this mainly to experiment with Go and MCP while also giving an agent the ability to generate valid UUIDs when needed (creating mock data for tests, seeding databases, etc.).",
+  },
+  {
     href: "https://statoos.dev",
     label: "statoos",
     tags: [
