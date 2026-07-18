@@ -4,7 +4,7 @@ import { projects } from "@/lib/projects";
 
 export default function Projects() {
   return (
-    <div className="vertical gird-cols-1 grid gap-4 md:grid-cols-[auto_1fr]">
+    <div className="gird-cols-1 vertical grid gap-4 md:grid-cols-[auto_1fr]">
       {projects.map((project) => (
         <Project key={project.href} project={project} />
       ))}

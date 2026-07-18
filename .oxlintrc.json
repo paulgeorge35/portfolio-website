@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "nextjs", "jsx-a11y"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "jsx-a11y/prefer-tag-over-role": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "19.0.0"
+    }
+  }
+}

@@ -3,14 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    loader: "custom",
-    loaderFile: "image-loader.ts",
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "image.paulgeorge.dev",
+        hostname: "cdn.paulgeorge.dev",
       },
     ],
+    qualities: [100, 75, 50, 25],
   },
 };
 

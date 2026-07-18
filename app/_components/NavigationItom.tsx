@@ -1,10 +1,10 @@
 "use client";
 
+import { useOpenPanel } from "@openpanel/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { useOpenPanel } from "@openpanel/nextjs";
 
 export type NavigationItemProps = {
   href: string;
@@ -25,7 +25,7 @@ export default function NavigationItem({
     });
   };
   return (
-    <Link href={href} className="vertical group" onClick={handleClick}>
+    <Link href={href} className="group vertical" onClick={handleClick}>
       {children}
       <span
         className={cn(

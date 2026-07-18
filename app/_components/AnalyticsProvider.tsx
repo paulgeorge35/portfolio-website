@@ -1,10 +1,10 @@
 "use client";
 
+import { OpenPanelComponent } from "@openpanel/nextjs";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
-import { OpenPanelComponent } from "@openpanel/nextjs";
 import CookieConsentBanner from "./CookieConsentBanner";
 import { UmamiAnalytics } from "./UmamiAnalytics";
 

@@ -1,5 +1,6 @@
-import { env } from "@/lib/config-env";
 import { useOpenPanel } from "@openpanel/nextjs";
+
+import { env } from "@/lib/config-env";
 
 export default function GithubLink() {
   const { track } = useOpenPanel();

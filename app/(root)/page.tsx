@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { env } from "@/lib/config-env";
 
@@ -7,12 +8,13 @@ export default function Home() {
     <div className="vertical gap-4">
       <span className="horizontal items-center gap-4">
         <Image
-          src={"/me.jpeg"}
+          src="https://cdn.paulgeorge.dev/p/cmrqlbhew000001odfirxniyy/cmrqqwqb6000001pn22hevkjq?w=100&h=100&q=100"
           alt="me"
           width={100}
           height={100}
           quality={100}
           priority
+          unoptimized
           className="size-16 rounded-full grayscale filter md:size-24"
         />
         <div className="vertical gap-2">
@@ -32,9 +34,9 @@ export default function Home() {
       <p className="text-justify text-sm text-stone-400">
         I tend to work on my own projects in my spare time and I&apos;m always
         looking for new challenges to tackle. Most of the{" "}
-        <a href="/projects" className="text-white">
+        <Link href="/projects" className="text-white">
           [stuff I&apos;ve built]
-        </a>{" "}
+        </Link>{" "}
         are tools that I once needed or that I still use in my own projects and
         workflows.
       </p>

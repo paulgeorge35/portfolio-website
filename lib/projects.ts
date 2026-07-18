@@ -8,6 +8,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    href: "https://cdn.paulgeorge.dev",
+    label: "CDN",
+    tags: [
+      "Next.js",
+      "Bun",
+      "Turborepo",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Cloudflare R2",
+      "Sharp",
+      "Better Auth",
+      "MCP",
+      "Tailwind",
+      "Shadcn UI",
+      "Docker",
+    ],
+    description:
+      "A self-hosted image CDN with a dashboard for projects and assets. Upload to R2, serve via public or signed URLs with on-the-fly resize/WebP (Sharp), and cache at Redis plus in-memory layers. Includes a management REST API and remote MCP server so agents can list, upload, and secure assets.",
+  },
+  {
     href: "https://uuid.paulgeorge.dev",
     label: "uuid",
     tags: ["Go", "Docker", "REST", "MCP", "OpenTelemetry"],

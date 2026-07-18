@@ -1,8 +1,10 @@
 "use client";
 
-import type { Project as ProjectType } from "@/lib/projects";
 import { useOpenPanel } from "@openpanel/nextjs";
 import Link from "next/link";
+
+import type { Project as ProjectType } from "@/lib/projects";
+
 import { Icons } from "./Icons";
 
 export default function Project({ project }: { project: ProjectType }) {
