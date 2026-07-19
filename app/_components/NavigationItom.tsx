@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 
+import { Icons } from "./Icons";
+
 export type NavigationItemProps = {
   href: string;
   children: React.ReactNode;
@@ -26,7 +28,12 @@ export default function NavigationItem({
   };
   return (
     <Link href={href} className="group vertical" onClick={handleClick}>
-      {children}
+      <span className="horizontal center-v gap-1">
+        {children}
+        {href.startsWith("mailto") && (
+          <Icons.arrowUpRight className="size-4 shrink-0" />
+        )}
+      </span>
       <span
         className={cn(
           "w-0 border-b border-stone-50 transition-all duration-300 ease-in-out group-hover:w-full",
