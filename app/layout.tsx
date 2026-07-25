@@ -26,10 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} vertical center-h bg-stone-900 font-mono text-stone-50 antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <body className={`${geistMono.className} vertical center-h`}>
         {children}
         <AnalyticsProvider />
       </body>

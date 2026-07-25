@@ -10,7 +10,7 @@ const navigationItems = [
 
 export default function Navigation() {
   return (
-    <nav className="horizontal w-full gap-4">
+    <nav className="horizontal w-full gap-5">
       {navigationItems.map((item) => (
         <NavigationItem href={item.href} key={item.href}>
           {item.label}

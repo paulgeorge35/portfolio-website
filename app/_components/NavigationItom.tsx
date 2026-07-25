@@ -27,8 +27,12 @@ export default function NavigationItem({
     });
   };
   return (
-    <Link href={href} className="group vertical" onClick={handleClick}>
-      <span className="horizontal center-v gap-1">
+    <Link
+      href={href}
+      className="group relative vertical min-h-10 justify-center py-2 transition-transform duration-150 ease-out active:scale-[0.96]"
+      onClick={handleClick}
+    >
+      <span className="horizontal center-v gap-1 text-stone-300 transition-colors duration-150 ease group-hover:text-stone-50">
         {children}
         {href.startsWith("mailto") && (
           <Icons.arrowUpRight className="size-4 shrink-0" />
@@ -36,7 +40,7 @@ export default function NavigationItem({
       </span>
       <span
         className={cn(
-          "w-0 border-b border-stone-50 transition-all duration-300 ease-in-out group-hover:w-full",
+          "w-0 border-b border-stone-50 transition-[width] duration-300 ease-out group-hover:w-full",
           {
             "w-full": isActive,
           },

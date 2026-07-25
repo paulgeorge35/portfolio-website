@@ -4,16 +4,16 @@ import { projects } from "@/lib/projects";
 
 export default function Projects() {
   return (
-    <div className="gird-cols-1 vertical grid gap-4 md:grid-cols-[auto_1fr]">
+    <div className="vertical grid gap-6 md:grid-cols-[auto_1fr]">
       {projects.map((project) => (
         <Project key={project.href} project={project} />
       ))}
-      <p className="text-sm text-balance text-stone-400">
+      <p className="text-sm text-pretty text-stone-400">
         More projects on my{" "}
         <a
           href={env.github}
           target="_blank"
-          className="cursor-pointer text-white"
+          className="inline-block cursor-pointer text-stone-50 underline decoration-stone-50/0 underline-offset-4 transition-[color,text-decoration-color,transform] duration-150 ease-out hover:decoration-stone-50/80 active:scale-[0.96]"
           rel="noreferrer"
         >
           [GitHub]
