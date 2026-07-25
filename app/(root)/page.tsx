@@ -8,7 +8,7 @@ export default function Home() {
     <div className="vertical gap-6">
       <span className="horizontal animate-enter items-center gap-4">
         <Image
-          src="https://cdn.paulgeorge.dev/p/cmrqlbhew000001odfirxniyy/cmrqqwqb6000001pn22hevkjq?w=100&h=100&q=100"
+          src="https://api.cdn.paulgeorge.dev/p/cmrqlbhew000001odfirxniyy/cmrqqwqb6000001pn22hevkjq?w=100&h=100&q=100"
           alt="me"
           width={100}
           height={100}
@@ -26,7 +26,7 @@ export default function Home() {
       </span>
 
       <p
-        className="animate-enter text-pretty text-sm leading-relaxed text-stone-400"
+        className="animate-enter text-sm leading-relaxed text-pretty text-stone-400"
         style={{ animationDelay: "100ms" }}
       >
         I&apos;m a Romanian Full Stack TypeScript developer with a passion for
@@ -37,7 +37,7 @@ export default function Home() {
       </p>
 
       <p
-        className="animate-enter text-pretty text-sm leading-relaxed text-stone-400"
+        className="animate-enter text-sm leading-relaxed text-pretty text-stone-400"
         style={{ animationDelay: "200ms" }}
       >
         I tend to work on my own projects in my spare time and I&apos;m always
@@ -53,7 +53,7 @@ export default function Home() {
       </p>
 
       <p
-        className="animate-enter text-pretty text-sm leading-relaxed text-stone-400"
+        className="animate-enter text-sm leading-relaxed text-pretty text-stone-400"
         style={{ animationDelay: "300ms" }}
       >
         Always open for a chat, so feel free to{" "}
