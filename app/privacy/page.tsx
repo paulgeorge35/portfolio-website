@@ -30,9 +30,9 @@ export default function PrivacyPolicy() {
         </h2>
         <p>
           This website uses cookies and similar tracking technologies (such as
-          Umami and Vercel Analytics) to analyze how visitors interact with the
-          website and to improve the user experience. These technologies collect
-          anonymous information about your browsing activity.
+          OpenPanel and Vercel Analytics) to analyze how visitors interact with
+          the website and to improve the user experience. These technologies
+          collect anonymous information about your browsing activity.
         </p>
         <p>
           The use of these tracking cookies is optional and requires your
