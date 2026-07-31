@@ -1,0 +1,61 @@
+name: Lighthouse Preview
+
+on:
+  deployment_status:
+
+concurrency:
+  group: lighthouse-preview-${{ github.event.deployment.id }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: audit
+    if: |
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment.environment == 'Preview'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Resolve PR number
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SHA="${{ github.event.deployment.sha }}"
+          PR_NUMBER=$(gh api "repos/${{ github.repository }}/commits/${SHA}/pulls" --jq '.[0].number // empty')
+          echo "number=${PR_NUMBER}" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch PageSpeed Insights (production)
+        id: pagespeed
+        env:
+          PAGESPEED_INSIGHTS_API_KEY: ${{ secrets.PAGESPEED_INSIGHTS_API_KEY }}
+        run: |
+          node .github/scripts/fetch-pagespeed.mjs > psi-results.json
+
+      - name: Format PR comment
+        if: steps.pr.outputs.number != ''
+        env:
+          PSI_JSON_FILE: psi-results.json
+        run: node .github/scripts/format-lighthouse-comment.mjs > lighthouse-comment.md
+
+      - name: Find existing PR comment
+        if: steps.pr.outputs.number != ''
+        id: find_comment
+        uses: peter-evans/find-comment@v4
+        with:
+          issue-number: ${{ steps.pr.outputs.number }}
+          comment-author: github-actions[bot]
+          body-includes: "<!-- lighthouse-preview -->"
+
+      - name: Post PR comment
+        if: steps.pr.outputs.number != ''
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          issue-number: ${{ steps.pr.outputs.number }}
+          body-path: lighthouse-comment.md
+          edit-mode: replace

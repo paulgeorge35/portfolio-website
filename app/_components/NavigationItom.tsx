@@ -32,7 +32,7 @@ export default function NavigationItem({
       className="group relative vertical min-h-10 justify-center py-2 transition-transform duration-150 ease-out active:scale-[0.96]"
       onClick={handleClick}
     >
-      <span className="horizontal center-v gap-1 text-stone-300 transition-colors duration-150 ease group-hover:text-stone-50">
+      <span className="ease horizontal center-v gap-1 text-stone-300 transition-colors duration-150 group-hover:text-stone-50">
         {children}
         {href.startsWith("mailto") && (
           <Icons.arrowUpRight className="size-4 shrink-0" />

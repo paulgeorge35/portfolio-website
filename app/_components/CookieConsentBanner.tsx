@@ -22,7 +22,7 @@ export default function CookieConsentBanner({
       transition={{ duration: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
       className="fixed right-4 bottom-4 left-4 z-50 vertical gap-4 rounded-2xl border border-stone-700/60 bg-stone-900/95 p-4 shadow-[0_8px_30px_rgb(0_0_0/0.35)] backdrop-blur-sm md:right-auto md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:transform"
     >
-      <p className="text-xs wrap-break-word hyphens-auto text-pretty text-stone-50 sm:text-left md:max-w-100">
+      <p className="text-xs text-pretty wrap-break-word hyphens-auto text-stone-50 sm:text-left md:max-w-100">
         This site uses tracking technologies. You may opt in or opt out of the
         use of these technologies.
       </p>
