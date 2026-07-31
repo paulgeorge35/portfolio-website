@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 import CookieConsentBanner from "./CookieConsentBanner";
-import { UmamiAnalytics } from "./UmamiAnalytics";
 
 // Assuming the banner component is in the same directory
 
@@ -47,7 +46,6 @@ export function AnalyticsProvider() {
       {consentStatus === "accepted" && (
         <>
           <Analytics />
-          <UmamiAnalytics appId={process.env.NEXT_PUBLIC_UMAMI_APP_ID} />
         </>
       )}
       {consentStatus === null && (
