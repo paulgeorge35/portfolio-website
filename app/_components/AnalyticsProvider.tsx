@@ -2,20 +2,17 @@
 
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import { Analytics } from "@vercel/analytics/react";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 import CookieConsentBanner from "./CookieConsentBanner";
 
-// Assuming the banner component is in the same directory
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
-const useHasMounted = () => {
-  const [hasMounted, setHasMounted] = useState(false);
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  return hasMounted;
-};
+const useHasMounted = () =>
+  useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
 export function AnalyticsProvider() {
   const [consentStatus, setConsentStatus] = useLocalStorage<
