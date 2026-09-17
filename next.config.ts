@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
     ],
     qualities: [100, 75, 50, 25],
   },
+  experimental: {
+    useTypeScriptCli: true,
+  },
 };
 
 export default nextConfig;
