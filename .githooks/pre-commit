@@ -13,11 +13,12 @@ if ! command -v bun >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Running pre-commit checks (lint + format)..."
+echo "Running pre-commit checks (lint + format + check)..."
 
 # --bun forces Bun's runtime so the oxlint/oxfmt shims (which have a
 # "#!/usr/bin/env node" shebang) don't depend on node being on PATH.
 bun --bun run lint
 bun --bun run format:check
+bun --bun check
 
 echo "Pre-commit checks passed."
