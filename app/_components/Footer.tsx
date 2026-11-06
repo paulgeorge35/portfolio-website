@@ -10,9 +10,8 @@ export default function Footer() {
       <span className="horizontal flex-wrap gap-1">
         <FooterItem href={env.github}>github</FooterItem>
         <FooterItem href={env.linkedin}>linkedin</FooterItem>
-        <FooterItem href={`${env.github}/portfolio-website`}>
-          view source
-        </FooterItem>
+        <FooterItem href={env.twitter}>X</FooterItem>
+        <FooterItem href={`${env.github}/portfolio-website`}>source</FooterItem>
       </span>
       <p className="text-sm text-stone-500">
         © {DateTime.now().year} Paul George
