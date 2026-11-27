@@ -28,7 +28,7 @@
     "next": "16.4.5",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "tailwind-merge": "^3.7.0",
+    "tailwind-merge": "^3.7.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.1"
   },
@@ -36,12 +36,12 @@
     "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4.3.5",
     "@types/luxon": "^3.7.6",
-    "@types/node": "^26.6.6",
-    "@types/react": "^19.3.0",
+    "@types/node": "^26.6.11",
+    "@types/react": "^19.3.3",
     "@types/react-dom": "^19.3.0",
     "oxfmt": "^0.76.0",
-    "oxlint": "^1.94.0",
-    "postcss": "^8.5.33",
+    "oxlint": "^1.95.0",
+    "postcss": "^8.5.34",
     "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2"
   }
